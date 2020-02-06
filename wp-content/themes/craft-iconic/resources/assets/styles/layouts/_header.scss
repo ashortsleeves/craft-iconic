@@ -80,18 +80,17 @@ header.banner {
 
         &.contact {
           a {
-            background-color: $brand-primary;
-            color: #fff;
-            padding-left: 20px;
-            padding-right: 20px;
+            @include btn;
+
+            font-weight: 400;
+            padding: 27px 20px;
           }
 
           @include desktop {
             padding-left: 10px;
 
             a {
-              padding-left: 30px;
-              padding-right: 30px;  
+              padding: 27px 30px;
             }
           }
         }

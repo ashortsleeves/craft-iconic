@@ -35,4 +35,9 @@ class App extends Controller
     {
       return get_field('logo', 'option');
     }
+
+    public function hero()
+    {
+      return get_field('hero', 'option');
+    }
 }

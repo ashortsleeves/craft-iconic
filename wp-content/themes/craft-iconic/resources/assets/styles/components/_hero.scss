@@ -1,0 +1,36 @@
+section.hero {
+  .container {
+    height: 350px;
+    display: flex;
+    align-items: center;
+
+    .cta {
+      span.cta-text,
+      span#typed,
+      .typed-cursor  {
+        font-size: 50px;
+        font-weight: 900;
+      }
+
+      span.cta-text {
+        display: block;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      span#typed,
+      .typed-cursor {
+        color: $brand-primary;
+      }
+
+      a.btn {
+        display: flex;
+        width: 272px;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ $black:                 #000;
 $white:                 #fff;
 
 $brand-primary:         #f26916;
+$brand-hover:           lighten($brand-primary, 15%);
 
 $theme-colors: (
   primary:              $brand-primary,

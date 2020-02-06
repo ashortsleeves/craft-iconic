@@ -1,3 +1,5 @@
+import Typed from 'typed.js';
+
 export default {
   init() {
     // JavaScript to be fired on all pages
@@ -5,6 +7,22 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
     // toggles hamburger and nav open and closed states
+    // Can also be included with a regular script tag
+
+    $('document').ready(function(){
+
+      var options = {
+        // strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+        stringsElement: '#typed-strings',
+        startDelay: 1200,
+        typeSpeed: 40,
+        backSpeed: 30,
+        backDelay: 1800
+      };
+
+      var typed = new Typed('#typed', options);
+    });
+
     var removeClass = true;
     $('.hamburger').click(function () {
       $('.hamburger').toggleClass('is-active');

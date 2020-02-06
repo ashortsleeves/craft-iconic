@@ -1,0 +1,26 @@
+@mixin btn {
+  color: #fff;
+  background-color: $brand-primary;
+  border-radius: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: 0.3s;
+
+  @include tablet {
+    font-size: 19px;
+    padding: 11px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $brand-primary;
+    background-color: #fff;
+    // box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 16px 0px rgba($brand-primary, 0.2);
+  }
+}
+
+.gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled),
+a.btn {
+  @include btn;
+}
