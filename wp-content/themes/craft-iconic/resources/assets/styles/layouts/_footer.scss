@@ -1,0 +1,110 @@
+section.contact-us {
+  padding: 30px 0;
+
+  @include laptop {
+    padding: 60px 0;
+  }
+
+  @include desktop {
+    padding: 140px 0;
+  }
+
+  h2 {
+    @include laptop {
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      font-size: 36px;
+    }
+  }
+
+  .contact-card {
+    .gform_wrapper .top_label .gfield_label, .gform_wrapper legend.gfield_label{
+      display: none;
+    }
+
+    padding: 45px;
+    background-color: $brand-primary;
+
+  }
+
+  .footer-content {
+    margin-bottom: 30px;
+  }
+
+  .nap {
+    margin-bottom: 15px;
+
+    img {
+      margin-right: 15px;
+    }
+
+    a {
+      font-weight: 600;
+    }
+  }
+}
+
+footer.content-info {
+  background-color: #191919;
+  padding: 30px 0;
+
+  @include laptop {
+    padding: 60px 0;
+  }
+
+  @include desktop {
+    padding: 120px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .menu-menu-1-container {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    ul.nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0;
+      width: 100%;
+      flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      li {
+        a {
+          color: #fff;
+
+          &:hover,
+          &:focus {
+            color: $brand-primary;
+          }
+        }
+      }
+    }
+
+    .socials {
+      a {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.copyright {
+  background-color: #191919;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 15px;
+}

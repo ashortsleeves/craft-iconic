@@ -17,3 +17,34 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+.gform_body {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      width: 100%;
+      margin-bottom: 25px;
+
+      input,
+      textarea {
+        width: 100%;
+        border: transparent;
+        display: block;
+        padding: 15px;
+      }
+
+      textarea {
+        height: 190px;
+      }
+    }
+  }
+}
+.gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled) {
+  width: 100%;
+  text-transform: capitalize;
+  border: solid 3px #fff;
+  font-size: 22px;
+  padding: 15px;
+}
