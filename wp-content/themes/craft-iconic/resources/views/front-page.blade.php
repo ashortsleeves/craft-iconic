@@ -59,18 +59,20 @@
       <section class="fp-section section4 jumbo-bg" style="background-image:url({{$front_page['section4']['background']['url']}})">
         <div class="container">
           <h1>{!!$front_page['section4']['title']!!}</h1>
-          @foreach($front_page['section4']['repeater'] as $repeater)
-            <div class="portfolio-single">
-              <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
-              <div class="portfolio-single-inner">
-                <h2>{!! $repeater['title'] !!}</h2>
-                <span class="subtitle">{!! $repeater['subtitle'] !!}</span>
-                <p>{{$repeater['content']}}</p>
-                <a href="{{$repeater['button']['url']}}" class="btn btn-lg">{{$repeater['button']['title']}}</a>
+          <div class="portfolio-slick">
+            @foreach($front_page['section4']['repeater'] as $repeater)
+              <div class="portfolio-single">
+                <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
+                <div class="portfolio-single-inner">
+                  <h2>{!! $repeater['title'] !!}</h2>
+                  <span class="subtitle">{!! $repeater['subtitle'] !!}</span>
+                  <p>{{$repeater['content']}}</p>
+                  <a href="{{$repeater['button']['url']}}" class="btn btn-lg">{{$repeater['button']['title']}}</a>
+                </div>
               </div>
-            </div>
-          @endforeach
-
+            @endforeach
+          </div>
+          <div class="slider-nav"></div>
         </div>
       </section>
     @endif
@@ -80,21 +82,25 @@
       <section class="fp-section section5">
         <div class="container">
           <h1>{{$front_page['section5']['title']}}</h1>
-          @foreach($front_page['section5']['repeater'] as $repeater)
-            <div class="testimonial-single">
-              <div class="img-wrap">
-                <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
-              </div>
-              <p><i>{{$repeater['content']}}</i></p>
-              <div class="name-wrap">
-                <img src="@asset('images/quotes.png')" />
-                <div class="name-wrap-inner">
-                  <h2>{{$repeater['name']}}</h2>
-                  <i>{{$repeater['subtitle']}}</i>
+          <div class="testimonial-slick">
+            @foreach($front_page['section5']['repeater'] as $repeater)
+              <div class="testimonial-wrap">
+                <div class="testimonial-single">
+                  <div class="img-wrap">
+                    <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
+                  </div>
+                  <p><i>{{$repeater['content']}}</i></p>
+                  <div class="name-wrap">
+                    <img src="@asset('images/quotes.png')" />
+                    <div class="name-wrap-inner">
+                      <h2>{{$repeater['name']}}</h2>
+                      <i>{{$repeater['subtitle']}}</i>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          @endforeach
+            @endforeach
+          </div>
         </div>
       </section>
 

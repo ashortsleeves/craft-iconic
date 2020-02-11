@@ -149,3 +149,7 @@ $width_hd:              1600px;
     padding-right: #{$child};
   }
 }
+
+//Slick
+$slick-loader-path:     '~slick-carousel/slick/';
+$slick-font-path:       '#{$slick-loader-path}fonts/';

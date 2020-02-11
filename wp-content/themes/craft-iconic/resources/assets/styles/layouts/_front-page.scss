@@ -359,6 +359,42 @@ section.fp-section {
         }
       }
     }
+
+    .slider-nav {
+      position: relative;
+      height: 15px;
+
+      @include tablet {
+        height: 60px;
+      }
+
+      ul.slick-dots {
+        bottom: 0;
+      }
+
+      li {
+        &:hover,
+        &:focus {
+          button {
+            background-color: rgba($brand-primary, 0.5);
+          }
+        }
+
+        button {
+          border-radius: 45px;
+          border: solid 2px $brand-primary;
+          transition: 0.3s;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &.slick-active button {
+          background-color: $brand-primary;
+        }
+      }
+    }
   }
 
   &.section5 {
@@ -371,6 +407,47 @@ section.fp-section {
       flex-direction: column;
     }
 
+    .testimonial-slick {
+      width: 100%;
+
+      button.slick-arrow {
+        background-color: $brand-primary;
+        z-index: 999;
+
+        &::before {
+          color: $brand-primary;
+          z-index: 999;
+          position: relative;
+          opacity: 1;
+        }
+
+        &::after {
+          display: block;
+          position: absolute;
+          content: " ";
+          background-color: #fff;
+          border-radius: 180px;
+        }
+
+        @include laptop {
+          height: 110px;
+          width: 110px;
+
+          &::before {
+            font-size: 80px;
+            top: 7px;
+          }
+
+          &::after {
+            height: 60px;
+            width: 60px;
+            top: 23px;
+            left: 23px;
+          }
+        }
+      }
+    }
+
     h1,
     h2,
     p,
@@ -380,6 +457,11 @@ section.fp-section {
 
     i {
       font-weight: 400;
+    }
+
+    .testimonial-wrap {
+      display: flex;
+      justify-content: center;
     }
 
     .testimonial-single {
@@ -396,6 +478,18 @@ section.fp-section {
 
       @include laptop {
         margin-bottom: 45px;
+      }
+    }
+
+    .img-wrap {
+      height: 132px;
+      width: 132px;
+      border-radius: 180px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
 
