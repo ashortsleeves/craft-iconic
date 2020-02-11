@@ -36,7 +36,11 @@ h1,
   color: $heading-color;
   font-family: $heading-font;
   font-weight: $h1-weight;
-  font-size: $h1-size;
+  font-size: $h2-size;
+
+  @include laptop {
+    font-size: $h1-size;
+  }
 }
 
 h2,
@@ -44,7 +48,11 @@ h2,
   color: $heading-color;
   font-family: $heading-font;
   font-weight: $h2-weight;
-  font-size: $h2-size;
+  font-size: $h3-size;
+
+  @include laptop {
+    font-size: $h2-size;
+  }
 }
 
 h3,
@@ -52,7 +60,11 @@ h3,
   color: $heading-color;
   font-family: $heading-font;
   font-weight: $h3-weight;
-  font-size: $h3-size;
+  font-size: $body-font-size;
+
+  @include laptop {
+    font-size: $h3-size;
+  }
 }
 
 p,
@@ -60,6 +72,10 @@ li {
   font-family: $body-font;
   font-size: $body-font-size;
   font-weight: $body-font-weight;
+
+  @include laptop {
+    font-size: $body-font-size-lg;
+  }
 }
 
 a {

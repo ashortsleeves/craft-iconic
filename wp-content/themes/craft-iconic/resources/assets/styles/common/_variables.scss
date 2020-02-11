@@ -16,18 +16,19 @@ $theme-colors: (
 $primary-font:          "Open Sans", sans-serif;
 $secondary-font:        "Open Sans", sans-serif;
 
-$body-font-size:        17px;
+$body-font-size:        16px;
+$body-font-size-lg:     19px;
 $body-font-weight:      400;
 $body-font:             $primary-font;
 $body-color:            $black;
 $heading-font:          $secondary-font;
 $heading-color:         $black;
-$h1-weight:             700;
-$h1-size:               36px;
-$h2-weight:             400;
+$h1-weight:             400;
+$h1-size:               44px;
+$h2-weight:             600;
 $h2-size:               26px;
-$h3-weight:             400;
-$h3-size:               18px;
+$h3-weight:             600;
+$h3-size:               22px;
 
 // Base Styles
 $base-transition:       0.3s ease-in-out;

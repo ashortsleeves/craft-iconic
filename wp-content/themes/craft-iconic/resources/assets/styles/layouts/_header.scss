@@ -72,9 +72,44 @@ header.banner {
           font-size: 19px;
           padding: 27px 15px;
           line-height: 1;
+          position: relative;
+
+          &::after {
+            content: " ";
+            position: absolute;
+            left: 15px;
+            right: 100%;
+            transition: 0.3s;
+            background: linear-gradient(to right, $brand-primary, lighten($brand-primary, 20%));
+            height: 2px;
+            top: calc(100% - 25px);
+          }
 
           @include desktop {
             padding: 27px 20px;
+
+            &::after {
+              content: " ";
+              position: absolute;
+              left: 20px;
+            }
+          }
+
+          &:hover,
+          &:focus {
+            &::after {
+              right: 15px;
+
+              @include desktop {
+                right: 20px;
+              }
+            }
+          }
+        }
+
+        &.current_page_item {
+          a {
+            color: $brand-primary;
           }
         }
 
@@ -83,7 +118,12 @@ header.banner {
             @include btn;
 
             font-weight: 400;
-            padding: 27px 20px;
+            padding: 27px 20px !important;
+            color: #fff;
+
+            &::after {
+              display: none;
+            }
           }
 
           @include desktop {

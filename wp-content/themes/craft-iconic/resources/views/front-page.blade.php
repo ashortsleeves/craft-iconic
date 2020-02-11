@@ -5,6 +5,99 @@
     @include('partials.page-header')
 
 
-    @include('partials.content-page')
+    @if($front_page['section1'])
+
+      <section class="fp-section section1">
+        <img src="{{$front_page['section1']['image']['url']}}" alt="{{$front_page['section1']['image']['title']}}" />
+
+        <div class="content">
+          <h1>{!!$front_page['section1']['title']!!}</h1>
+          <p>{!!$front_page['section1']['content']!!}</p>
+          <a class="btn btn-white btn-lg" href={{$front_page['section1']['button']['url']}}>{{$front_page['section1']['button']['title']}}</a>
+        </div>
+      </section>
+    @endif
+
+    @if($front_page['section2'])
+      <section class="fp-section section2 jumbo-bg" style="background-image:url({{$front_page['section2']['background']['url']}})">
+        <div class="container">
+          <h1>{!! $front_page['section2']['title']!!}</h1>
+          <div class="row">
+            @foreach($front_page['section2']['repeater'] as $repeater)
+              <div class="col-md-4">
+                <img src="{{$repeater['icon']['url']}}" alt="{{$repeater['icon']['title']}}" />
+                <h2>{!! $repeater['title'] !!}</h2>
+                <p>{!! $repeater['content'] !!}</p>
+                <a class="link" href="{{$repeater['link']['url']}}">{{$repeater['link']['title']}}</a>
+              </div>
+            @endforeach
+          </div>
+        </div>
+      </section>
+    @endif
+
+    @if($front_page['section3'])
+      <section class="fp-section section3 jumbo-bg" style="background-image:url({{$front_page['section3']['background']['url']}})">
+        <div class="container">
+          <h1>{!!$front_page['section3']['title']!!}</h1>
+          <div class="row">
+            @foreach($front_page['section3']['repeater'] as $repeater)
+              <div class="col-sm-6 col-md-4">
+                <div class="cardstyle">
+                  <img src="{{$repeater['icon']['url']}}" alt="{{$repeater['icon']['title']}}" />
+                  <h3>{!! $repeater['title'] !!}</h3>
+                  <p>{!! $repeater['content'] !!}</p>
+                </div>
+              </div>
+            @endforeach
+          </div>
+        </div>
+      </section>
+    @endif
+
+    @if($front_page['section4'])
+      <section class="fp-section section4 jumbo-bg" style="background-image:url({{$front_page['section4']['background']['url']}})">
+        <div class="container">
+          <h1>{!!$front_page['section4']['title']!!}</h1>
+          @foreach($front_page['section4']['repeater'] as $repeater)
+            <div class="portfolio-single">
+              <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
+              <div class="portfolio-single-inner">
+                <h2>{!! $repeater['title'] !!}</h2>
+                <span class="subtitle">{!! $repeater['subtitle'] !!}</span>
+                <p>{{$repeater['content']}}</p>
+                <a href="{{$repeater['button']['url']}}" class="btn btn-lg">{{$repeater['button']['title']}}</a>
+              </div>
+            </div>
+          @endforeach
+
+        </div>
+      </section>
+    @endif
+
+    @if($front_page['section5'])
+
+      <section class="fp-section section5">
+        <div class="container">
+          <h1>{{$front_page['section5']['title']}}</h1>
+          @foreach($front_page['section5']['repeater'] as $repeater)
+            <div class="testimonial-single">
+              <div class="img-wrap">
+                <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
+              </div>
+              <p><i>{{$repeater['content']}}</i></p>
+              <div class="name-wrap">
+                <img src="@asset('images/quotes.png')" />
+                <div class="name-wrap-inner">
+                  <h2>{{$repeater['name']}}</h2>
+                  <i>{{$repeater['subtitle']}}</i>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      </section>
+
+    @endif
   @endwhile
 @endsection

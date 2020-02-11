@@ -40,4 +40,25 @@ class App extends Controller
     {
       return get_field('hero', 'option');
     }
+
+
+
+    // public function frontPage()
+    // {
+    //   $fp = [];
+    //
+    //   if(get_field('front_page_group')) {
+    //     foreach(get_field('front_page_group') as $group) {
+    //       $fp[] = $group;
+    //     }
+    //   } else {
+    //     $fp = false;
+    //   }
+    //
+    //   $data = [
+    //     'fp' => $fp
+    //   ];
+    //
+    //   return $data;
+    // }
 }

@@ -1,4 +1,4 @@
-<section class="fp-section hero jumbo-bg responsive-hero">
+<section class="hero jumbo-bg responsive-hero @if(is_front_page())hero-fp @endif">
   <div class="container">
     <div id="typed-strings">
       @if($hero['typed'])
@@ -15,8 +15,7 @@
      @endif
    </div>
   </div>
+  @if($front_page['featured_projects'])
+    <img class="featured-projects" src="{{$front_page['featured_projects']['url']}}" alt="{{$front_page['featured_projects']['title']}}" />
+  @endif
 </section>
-
-<div class="page-header">
-  <h1>{!! App::title() !!}</h1>
-</div>

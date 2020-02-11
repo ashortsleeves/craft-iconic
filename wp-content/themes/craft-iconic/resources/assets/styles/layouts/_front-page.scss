@@ -1,0 +1,321 @@
+section.fp-section {
+  padding: 30px 0;
+
+  @include laptop {
+    padding: 60px 0;
+  }
+
+  @include desktop {
+    padding: 140px 0;
+  }
+
+  .container {
+    @include wide {
+      max-width: 1170px;
+    }
+
+    @include hd {
+      max-width: 1170px;
+    }
+  }
+
+  h1 {
+    margin-bottom: 15px;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include laptop {
+      margin-bottom: 45px;
+    }
+
+    @include desktop {
+      margin-bottom: 85px;
+    }
+  }
+
+  &.section1 {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+
+    @include tablet {
+      overflow: visible;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.5;
+      height: 100%;
+      width: auto;
+
+      @include tablet {
+        height: 300px;
+        position: relative;
+        opacity: 1;
+      }
+
+      @include desktop {
+        height: 486px;
+      }
+
+      @include hd {
+        height: auto;
+        width: 50%;
+      }
+    }
+
+    p,
+    h1 {
+      color: #fff;
+      margin-bottom: 0.5rem;
+      text-align: left;
+
+      @include desktop {
+        max-width: 650px;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      z-index: 999;
+      background: rgba($brand-primary, 0.9);
+      background: linear-gradient(138deg, rgba($brand-primary, 0.9) 50%, rgba($brand-primary, 0.7) 100%);
+      padding: 30px 15px;
+
+      @include tablet {
+        position: absolute;
+        padding: 30px;
+        top: -35px;
+        bottom: -35px;
+        right: 0;
+        background: $brand-primary;
+        width: 66%;
+      }
+
+      @include laptop {
+        padding: 60px;
+      }
+
+
+      @include desktop {
+        padding: 140px;
+        width: 813px;
+      }
+
+      @include wide {
+        width: 55%;
+      }
+    }
+  }
+
+  &.section2 {
+    @include tablet {
+      .container {
+        padding-top: 35px;
+      }
+    }
+
+    .col-md-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 15px;
+
+      @include tablet {
+        padding: 0 15px;
+      }
+
+      img,
+      h2,
+      p {
+        margin-bottom: 15px;
+
+        @include tablet {
+          margin-bottom: 30px;
+        }
+      }
+
+      h2 {
+        font-weight: 600;
+      }
+
+      a.link {
+        font-weight: 600;
+        position: relative;
+        transition: 0.3s;
+
+        @include laptop {
+          font-size: $h3-size;
+        }
+
+        &::after {
+          content: " ";
+          position: absolute;
+          left: 0;
+          right: 0;
+          background-color: $brand-primary;
+          height: 2px;
+          top: calc(100% - 5px);
+          transition: 0.3s;
+        }
+
+        &:hover,
+        &:focus {
+          color: $brand-hover;
+
+          &::after {
+            background-color: $brand-hover;
+          }
+        }
+      }
+    }
+  }
+
+  &.section3 {
+    h1 {
+      color: #fff;
+    }
+
+    .col-sm-6 {
+      padding-bottom: 15px;
+
+      .cardstyle {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        height: 100%;
+        padding: 15px;
+
+        img,
+        h3,
+        p {
+          margin-bottom: 15px;
+        }
+
+        @include laptop {
+          padding: 20px 20px;
+        }
+
+        @include desktop {
+          padding: 35px 50px;
+        }
+      }
+
+      @include mobile {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  &.section4 {
+    .portfolio-single {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+
+        @include tablet {
+          width: 300px;
+        }
+
+        @include laptop {
+          width: 516px;
+        }
+      }
+
+      &-inner {
+        padding: 15px;
+
+        @include desktop {
+          padding: 60px;
+        }
+
+        span.subtitle {
+          color: $brand-primary;
+          font-size: 19px;
+          display: block;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &.section5 {
+    background-color: #3a3a3a;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1,
+    h2,
+    p,
+    i {
+      color: #fff;
+    }
+
+    i {
+      font-weight: 400;
+    }
+
+    .testimonial-single {
+      max-width: 712px;
+    }
+
+    .img-wrap,
+    p {
+      margin-bottom: 15px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+
+      @include laptop {
+        margin-bottom: 45px;
+      }
+    }
+
+    .testimonial-single {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .name-wrap {
+        display: flex;
+        text-align: left;
+
+        &-inner {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}

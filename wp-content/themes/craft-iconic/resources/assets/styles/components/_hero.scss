@@ -1,15 +1,50 @@
 section.hero {
+  position: relative;
+  overflow: hidden;
+
+  &.hero-fp {
+    .container {
+      @include tablet {
+        height: 400px;
+      }
+
+      @include laptop {
+        height: 500px;
+      }
+
+      @include desktop {
+        height: 700px;
+      }
+    }
+  }
+
   .container {
-    height: 350px;
+    position: relative;
+    z-index: 999;
+    height: 250px;
     display: flex;
     align-items: center;
+    background-color: rgba(255, 255, 254, 0.7);
+
+
+    @include mobile {
+      background-color: transparent;
+    }
+
+    @include laptop {
+      height: 350px;
+    }
 
     .cta {
       span.cta-text,
       span#typed,
       .typed-cursor  {
-        font-size: 50px;
+        font-size: $h2-size;
         font-weight: 900;
+
+        @include laptop {
+          font-size: $h1-size;
+        }
       }
 
       span.cta-text {
@@ -18,19 +53,103 @@ section.hero {
         line-height: 1;
       }
 
+      span#typed-strings {
+        position: absolute;
+        opacity: 0;
+      }
+
       span#typed,
       .typed-cursor {
         color: $brand-primary;
       }
 
       a.btn {
-        display: flex;
-        width: 272px;
-        height: 80px;
-        align-items: center;
-        justify-content: center;
         margin-top: 20px;
+        display: block;
+        width: 190px;
+
+        @include laptop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 272px;
+          height: 80px;
+          font-size: 22px;
+        }
       }
     }
   }
+
+  img.featured-projects {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    bottom: -15px;
+    opacity: 0.3;
+
+
+    @include mobile {
+      opacity: 0.7;
+      top: 15px;
+      bottom: inherit;
+      left: 55%;
+      height: calc(100% - 15px);
+      width: auto;
+    }
+
+    @include tablet {
+      top: 30px;
+      opacity: 1;
+      left: 45%;
+      height: calc(100% - 30px);
+    }
+
+    @include laptop {
+      left: 50%;
+
+    }
+
+    @include desktop {
+      height: calc(100% - 65px);
+      width: auto;
+      top: 65px;
+      left: 40%;
+      opacity: 1;
+    }
+  }
+
+// FOR OLD IMG
+  // img.featured-projects {
+  //   position: absolute;
+  //   right: 0;
+  //   height: 100%;
+  //   bottom: -15px;
+  //   opacity: 0.3;
+  //
+  //
+  //   @include mobile {
+  //     height: auto;
+  //     opacity: 0.7;
+  //     width: 48%;
+  //     top: 15px;
+  //     bottom: inherit;
+  //   }
+  //
+  //   @include tablet {
+  //     width: 60%;
+  //     top: 30px;
+  //     opacity: 1;
+  //   }
+  //
+  //   @include laptop {
+  //     width: 45%;
+  //
+  //   }
+  //
+  //   @include desktop {
+  //     width: 704px;
+  //     top: 65px;
+  //     opacity: 1;
+  //   }
+  // }
 }
