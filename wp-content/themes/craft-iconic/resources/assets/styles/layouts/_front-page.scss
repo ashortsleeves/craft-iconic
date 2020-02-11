@@ -200,6 +200,7 @@ section.fp-section {
         background-color: #fff;
         height: 100%;
         padding: 15px;
+        position: relative;
 
         img,
         h3,
@@ -218,6 +219,103 @@ section.fp-section {
 
       @include mobile {
         padding-bottom: 30px;
+      }
+
+      .cardstyle::after {
+        display: block;
+        position: absolute;
+        content: " ";
+        border-top: 15px solid white;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        top: 100%;
+        // left: calc(50% - 20px);
+        width: 0;
+        height: 0;
+      }
+
+      @include phablet {
+        .cardstyle::after {
+          // left: 100%;
+          top: calc(50% - 20px);
+        }
+      }
+
+      &:last-of-type() {
+        .cardstyle::after {
+          display: none;
+        }
+      }
+
+      @include phablet {
+        &:nth-of-type(1),
+        &:nth-of-type(5) {
+          .cardstyle::after {
+            left: 100%;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 15px solid white;
+          }
+        }
+
+        &:nth-of-type(4) {
+          .cardstyle::after {
+            display: block;
+            right: 100%;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 15px solid white;
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          .cardstyle::after {
+            top: 100%;
+            border-right: 20px solid transparent;
+            border-left: 20px solid transparent;
+            border-top: 15px solid white;
+          }
+        }
+
+        &:last-of-type() {
+          .cardstyle::after {
+            display: none;
+          }
+        }
+      }
+
+      @include tablet {
+        &:nth-of-type(2) {
+          .cardstyle::after {
+            left: 100%;
+            top: calc(50% - 20px);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 15px solid white;
+          }
+        }
+
+        &:nth-of-type(4) {
+          .cardstyle::after {
+            display: none;
+          }
+        }
+
+        &:nth-of-type(5),
+        &:last-of-type {
+          .cardstyle::after {
+            display: block;
+            right: 100%;
+            left: auto;
+            border-left: transparent;
+            top: calc(50% - 20px);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 15px solid white;
+
+          }
+        }
       }
     }
   }
