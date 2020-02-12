@@ -8,6 +8,7 @@
 
 header.banner {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 
   .container {
     display: flex;
@@ -41,9 +42,10 @@ header.banner {
 
     &::after {
       background-color: white;
+      transform: skewX(-45deg);
       height: 5px;
       width: 9px;
-      left: 51px;
+      left: 50px;
       top: calc(100% - 4px);
     }
 

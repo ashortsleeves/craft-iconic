@@ -51,7 +51,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-copyright">
-        © Copyright <?php echo date("Y"); ?> - Craft Iconic - Web Design & Online Marketing
+        © Copyright {{ date("Y") }} - Craft Iconic - Web Design & Online Marketing
       </div>
     </div>
   </div>

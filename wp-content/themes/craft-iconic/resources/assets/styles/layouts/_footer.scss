@@ -24,9 +24,14 @@ section.contact-us {
       display: none;
     }
 
-    padding: 45px;
+    padding: 25px;
     background-color: $brand-primary;
+    margin: 0 -15px -30px;
 
+    @include mobile {
+      padding: 45px;
+      margin: 0;
+    }
   }
 
   .footer-content {
@@ -35,6 +40,7 @@ section.contact-us {
 
   .nap {
     margin-bottom: 15px;
+    display: flex;
 
     img {
       margin-right: 15px;
@@ -42,6 +48,7 @@ section.contact-us {
 
     a {
       font-weight: 600;
+      align-self: center;
     }
   }
 }

@@ -12,7 +12,6 @@ export default {
     $('document').ready(function(){
 
       var options = {
-        // strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
         stringsElement: '#typed-strings',
         startDelay: 1200,
         typeSpeed: 40,
@@ -43,20 +42,5 @@ export default {
       }
       removeClass = true;
     }, false);
-
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('.scrollup').fadeIn();
-      } else {
-        $('.scrollup').fadeOut();
-      }
-    });
-
-    $('.scrollup').click(function () {
-      $('html, body').animate({
-        scrollTop: 0,
-      }, 600);
-      return false;
-    });
   },
 };

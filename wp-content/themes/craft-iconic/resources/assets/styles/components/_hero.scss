@@ -35,6 +35,35 @@ section.hero {
       height: 350px;
     }
 
+    #typed-strings {
+      position: absolute;
+      left: 15px;
+      top: calc(50% - 35px);
+
+      @include laptop {
+        top: calc(50% - 60px);
+      }
+
+      p {
+        opacity: 0;
+        position: absolute;
+
+
+        &:last-of-type {
+          opacity: 1;
+          width: 270px;
+          font-size: $h2-size;
+          font-weight: 900;
+          color: $brand-primary;
+
+          @include laptop {
+            font-size: $h1-size;
+            width: 435px;
+          }
+        }
+      }
+    }
+
     .cta {
       span.cta-text,
       span#typed,
@@ -53,9 +82,12 @@ section.hero {
         line-height: 1;
       }
 
-      span#typed-strings {
-        position: absolute;
-        opacity: 0;
+      .typed-wrapper {
+        height: 41px;
+
+        @include laptop {
+          height: 70px;
+        }
       }
 
       span#typed,

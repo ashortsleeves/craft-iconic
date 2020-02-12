@@ -112,3 +112,13 @@ ul.nav a {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.sm-container {
+  @include wide {
+    max-width: 1170px;
+  }
+
+  @include hd {
+    max-width: 1170px;
+  }
+}

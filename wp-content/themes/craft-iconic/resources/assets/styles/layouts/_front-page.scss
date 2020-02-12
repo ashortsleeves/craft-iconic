@@ -189,7 +189,7 @@ section.fp-section {
     }
 
     .col-sm-6 {
-      padding-bottom: 15px;
+      padding-bottom: 20px;
 
       .cardstyle {
         text-align: center;
@@ -503,6 +503,10 @@ section.fp-section {
       .name-wrap {
         display: flex;
         text-align: left;
+
+        img {
+          align-self: flex-start;
+        }
 
         &-inner {
           padding-left: 15px;

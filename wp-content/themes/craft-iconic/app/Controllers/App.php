@@ -53,6 +53,15 @@ class App extends Controller
       return $data;
     }
 
+    public function basicSettings()
+    {
+      $data = [
+        'hero_section' => get_field('hero_section'),
+      ];
+
+      return $data;
+    }
+
     // public function frontPage()
     // {
     //   $fp = [];
