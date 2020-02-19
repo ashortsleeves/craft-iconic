@@ -92,6 +92,10 @@ section.fp-section {
       background: linear-gradient(138deg, rgba($brand-primary, 0.9) 50%, rgba($brand-primary, 0.7) 100%);
       padding: 30px 15px;
 
+      a.btn {
+        margin-top: 25px;
+      }
+
       @include tablet {
         position: absolute;
         padding: 30px;
@@ -137,7 +141,7 @@ section.fp-section {
         padding: 0 15px;
       }
 
-      img,
+      i,
       h2,
       p {
         margin-bottom: 15px;
@@ -145,6 +149,18 @@ section.fp-section {
         @include tablet {
           margin-bottom: 30px;
         }
+      }
+
+      i {
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 180px;
+        color: #fff;
+        background-color: $brand-primary;
+        height: 156px;
+        width: 156px;
       }
 
       h2 {
@@ -202,10 +218,14 @@ section.fp-section {
         padding: 15px;
         position: relative;
 
-        img,
+        i,
         h3,
         p {
           margin-bottom: 15px;
+        }
+
+        i {
+          font-size: 36px;
         }
 
         @include laptop {
@@ -329,6 +349,7 @@ section.fp-section {
 
       @include tablet {
         flex-direction: row;
+        padding: 0 15px;
       }
 
       img {
@@ -410,40 +431,40 @@ section.fp-section {
     .testimonial-slick {
       width: 100%;
 
-      button.slick-arrow {
+      i.slick-arrow {
+        position: absolute;
+        display: block;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: 900;
+        top: 45%;
+        font-size: 20px;
+        color: #fff;
         background-color: $brand-primary;
         z-index: 999;
+        cursor: pointer;
+        transition: 0.3s;
 
-        &::before {
-          color: $brand-primary;
-          z-index: 999;
-          position: relative;
-          opacity: 1;
+        &:hover,
+        &:focus {
+          background-color: $brand-hover;
         }
 
-        &::after {
-          display: block;
-          position: absolute;
-          content: " ";
-          background-color: #fff;
-          border-radius: 180px;
+        &.fa-chevron-left {
+          left: 0;
         }
 
-        @include laptop {
-          height: 110px;
-          width: 110px;
+        &.fa-chevron-right {
+          right: 0;
+        }
 
-          &::before {
-            font-size: 80px;
-            top: 7px;
-          }
-
-          &::after {
-            height: 60px;
-            width: 60px;
-            top: 23px;
-            left: 23px;
-          }
+        @include desktop {
+          height: 108px;
+          width: 108px;
+          line-height: 108px;
+          font-size: 60px;
         }
       }
     }
@@ -504,8 +525,11 @@ section.fp-section {
         display: flex;
         text-align: left;
 
-        img {
+        i.fas {
           align-self: flex-start;
+          color: $brand-primary;
+          font-weight: 900;
+          font-size: 60px;
         }
 
         &-inner {

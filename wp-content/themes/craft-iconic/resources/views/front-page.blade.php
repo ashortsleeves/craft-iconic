@@ -25,7 +25,7 @@
           <div class="row">
             @foreach($front_page['section2']['repeater'] as $repeater)
               <div class="col-md-4">
-                <img src="{{$repeater['icon']['url']}}" alt="{{$repeater['icon']['title']}}" />
+                {!! $repeater['icon'] !!}
                 <h2>{!! $repeater['title'] !!}</h2>
                 <p>{!! $repeater['content'] !!}</p>
                 <a class="link" href="{{$repeater['link']['url']}}">{{$repeater['link']['title']}}</a>
@@ -44,7 +44,7 @@
             @foreach($front_page['section3']['repeater'] as $repeater)
               <div class="col-sm-6 col-md-4">
                 <div class="cardstyle">
-                  <img src="{{$repeater['icon']['url']}}" alt="{{$repeater['icon']['title']}}" />
+                  {!! $repeater['icon'] !!}
                   <h3>{!! $repeater['title'] !!}</h3>
                   <p>{!! $repeater['content'] !!}</p>
                 </div>
@@ -91,7 +91,7 @@
                   </div>
                   <p><i>{{$repeater['content']}}</i></p>
                   <div class="name-wrap">
-                    <img src="@asset('images/quotes.png')" />
+                    <i class="fas fa-quote-left"></i>
                     <div class="name-wrap-inner">
                       <h2>{{$repeater['name']}}</h2>
                       <i>{{$repeater['subtitle']}}</i>

@@ -28,9 +28,12 @@ export default {
       slidesToShow: 1,
       dots: false,
       arrows: true,
+      nextArrow: '<i class="fas fa-chevron-right"></i>',
+      prevArrow: '<i class="fas fa-chevron-left"></i>',
+      // appendArrows: '.testimonial-slick .slider-nav',
       responsive: [
         {
-          breakpoint: 990,
+          breakpoint: 991,
           settings: {
             dots: false,
             arrows: false,

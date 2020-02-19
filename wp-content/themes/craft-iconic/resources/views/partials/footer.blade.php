@@ -8,16 +8,16 @@
               {!! $footer['content'] !!}
             </div>
             <div class="nap">
-              <img src="@asset('images/mail.png')" />
+              <i class="fas fa-envelope"></i>
               <a target="_blank" href="mailto:{{$footer['site_info']['email']}}">{{$footer['site_info']['email']}}</a>
 
             </div>
             <div class="nap">
-              <img src="@asset('images/phone.png')" />
+              <i class="fas fa-phone"></i>
               <a href="tel:{{$footer['site_info']['phone']}}">{{$footer['site_info']['phone']}}</a>
             </div>
             <div class="nap">
-              <img src="@asset('images/location.png')" />
+              <i class="fas fa-map-marker-alt"></i>
 
               <a target="_blank" href="https://www.google.com/maps/search/{{str_replace(" ", "+", $footer['site_info']['address'])}}+{{ str_replace(" ", "+", $footer['site_info']['town'])}}">{{$footer['site_info']['address']}}, {{$footer['site_info']['town']}}, {{$footer['site_info']['state']}} {{$footer['site_info']['zip']}}</a>
             </div>
@@ -41,9 +41,9 @@
       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
     @endif
     <div class="socials">
-      <a href="{{$footer['site_info']['facebook']}}"><img src="@asset('images/fb.png')" /></a>
-      <a href="{{$footer['site_info']['twitter']}}"><img src="@asset('images/twitter.png')" /></a>
-      <a href="{{$footer['site_info']['linkedin']}}"><img src="@asset('images/linkedin.png')" /></a>
+      <a href="{{$footer['site_info']['facebook']}}"><i class="fab fa-facebook-f"></i></a>
+      <a href="{{$footer['site_info']['twitter']}}"><i class="fab fa-twitter"></i></a>
+      <a href="{{$footer['site_info']['linkedin']}}"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </div>
 </footer>
