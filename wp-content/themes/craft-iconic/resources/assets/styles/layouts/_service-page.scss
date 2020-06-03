@@ -1,0 +1,174 @@
+section.services-hero {
+  .container {
+    @include desktop {
+      height: 520px;
+    }
+
+    .row {
+      width: calc(100% + 30px);
+
+      .col-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        max-width: 280px;
+
+        @include laptop {
+          max-width: none;
+        }
+
+        strong {
+          color: $brand-primary;
+          display: block;
+          font-weight: 800;
+        }
+      }
+
+      img {
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 0;
+        opacity: 0.1;
+
+        @include mobile {
+          left: auto;
+          width: 50%;
+          opacity: 1;
+        }
+
+        @include tablet {
+          width: 100%;
+          max-width: 682px;
+        }
+
+        @include desktop {
+          bottom: -20px;
+        }
+      }
+    }
+  }
+}
+
+section.service-section {
+  position: relative;
+
+  .jumbo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    background-position: right;
+
+    @include laptop {
+      top: 150px;
+    }
+  }
+
+  .container {
+    position: relative;
+    padding: 15px;
+
+    @include mobile {
+      padding: 30px 15px;
+    }
+
+    @include tablet {
+      padding: 60px 15px;
+    }
+
+    @include laptop {
+      max-width: 1560px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .content {
+    padding: 15px;
+    background-color: rgba($brand-primary, 0.9);
+
+    @include tablet {
+      padding: 30px;
+    }
+
+    @include laptop {
+      width: 760px;
+      padding: 75px;
+      background-color: $brand-primary;
+      margin-left: auto;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    h2.h1,
+    p,
+    i {
+      color: #fff;
+    }
+
+    i {
+      margin-right: 15px;
+      margin-top: 5px;
+      font-size: $h2-size;
+
+      @include laptop {
+        font-size: $h1-size;
+      }
+    }
+
+    h2 {
+      display: inline-block;
+    }
+
+    h2.h1 {
+      font-weight: 800;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    .content {
+      background-color: rgba(255, 255, 254, 0.9);
+
+      @include laptop {
+        background-color: #fff;
+        margin-left: 0;
+      }
+
+      p {
+        color: #000;
+      }
+
+      h2.h1,
+      i {
+        color: $brand-primary;
+      }
+
+    }
+  }
+
+  &:nth-of-type(2) {
+    @include laptop {
+      margin-top: -150px;
+    }
+  }
+
+  &:last-of-type {
+    @include laptop {
+      padding-bottom: 75px;
+
+      .jumbo-bg {
+        height: auto;
+        bottom: 0;
+      }
+    }
+  }
+}

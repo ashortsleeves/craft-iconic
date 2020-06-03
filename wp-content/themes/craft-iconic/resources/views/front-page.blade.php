@@ -28,7 +28,9 @@
                 {!! $repeater['icon'] !!}
                 <h2>{!! $repeater['title'] !!}</h2>
                 <p>{!! $repeater['content'] !!}</p>
-                <a class="link" href="{{$repeater['link']['url']}}">{{$repeater['link']['title']}}</a>
+                @if($repeater['link'])
+                  <a class="link" href="{{$repeater['link']['url']}}">{{$repeater['link']['title']}}</a>
+                @endif
               </div>
             @endforeach
           </div>
