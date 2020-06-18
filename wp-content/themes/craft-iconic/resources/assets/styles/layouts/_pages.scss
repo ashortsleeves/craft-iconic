@@ -42,7 +42,7 @@ body.template-contact-data {
 
     .contact-card {
       margin-top: 30px;
-      
+
       @include tablet {
         margin-top: -32px;
       }
@@ -50,6 +50,22 @@ body.template-contact-data {
       @include laptop {
         margin-top: -52px;
       }
+    }
+  }
+}
+
+section.portfolio-hero {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  h1 {
+    strong {
+      font-size: 1.05em;
+      display: block;
+      color: $brand-primary;
     }
   }
 }

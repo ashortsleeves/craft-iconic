@@ -67,9 +67,11 @@
                 <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
                 <div class="portfolio-single-inner">
                   <h2>{!! $repeater['title'] !!}</h2>
-                  <span class="subtitle">{!! $repeater['subtitle'] !!}</span>
+                  <span class="subtitle"><a href="https://{!! $repeater['subtitle'] !!}" target="_blank">{!! $repeater['subtitle'] !!}</a></span>
                   <p>{{$repeater['content']}}</p>
-                  <a href="{{$repeater['button']['url']}}" class="btn btn-lg">{{$repeater['button']['title']}}</a>
+                  @if(!empty($repeater['button']))
+                    <a href="{{$repeater['button']['url']}}" class="btn btn-lg">{{$repeater['button']['title']}}</a>
+                  @endif
                 </div>
               </div>
             @endforeach

@@ -130,3 +130,92 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * Adding custom post Categories
+ */
+add_action('init', function() {
+
+    // Set UI labels for Custom Post Type
+        $labels = array(
+            'name'                => __( 'Projects' ),
+            'singular_name'       => __( 'Project' ),
+            'menu_name'           => __( 'Projects'),
+            'parent_item_colon'   => __( 'Parent Projects'),
+            'all_items'           => __( 'All Projects'),
+            'view_item'           => __( 'View Project'),
+            'add_new_item'        => __( 'Add New Project'),
+            'archives'            => __( 'Project Archives', 'text_domain' ),
+            'add_new'             => __( 'Add New'),
+            'edit_item'           => __( 'Edit Project'),
+            'update_item'         => __( 'Update Project'),
+            'search_items'        => __( 'Search Projects'),
+            'not_found'           => __( 'Not Found'),
+            'not_found_in_trash'  => __( 'Not found in Trash'),
+        );
+
+    // Set other options for Custom Post Type
+
+        $args = array(
+            'label'               => __( 'project' ),
+            'description'         => __( 'Projects' ),
+            'labels'              => $labels,
+            'supports'            => array( 'title', 'editor', 'excerpt','thumbnail', 'revisions', 'custom-fields', ),
+            'hierarchical'        => false,
+            'public'              => true,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 5,
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => false,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+            'menu_icon'   => 'dashicons-carrot',
+
+            // This is where we add taxonomies to our CPT
+            'taxonomies'          => array('sitecategories' ),
+        );
+
+        // Registering your Custom Post Type
+        register_post_type( 'project', $args );
+
+
+// Register Site Type Taxonomy
+  $labels = array(
+		'name'                       => _x( 'Site Categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Site Category', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Site Categories', 'text_domain' ),
+		'all_items'                  => __( 'All Site Categories', 'text_domain' ),
+		'parent_item'                => __( 'Parent Site Category', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Site Category:', 'text_domain' ),
+		'new_item_name'              => __( 'New Site Category Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Site Category', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Site Category', 'text_domain' ),
+		'update_item'                => __( 'Update Site Category', 'text_domain' ),
+		'view_item'                  => __( 'View Site Category', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Site Categories with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Site Category', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Site Categories', 'text_domain' ),
+		'search_items'               => __( 'Search Site Categories', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No Site Categories', 'text_domain' ),
+		'items_list'                 => __( 'Site Categories list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Site Categories list navigation', 'text_domain' ),
+	);
+
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+	);
+	register_taxonomy( 'sitecategories', array( 'project' ), $args );
+
+});

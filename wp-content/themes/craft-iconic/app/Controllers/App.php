@@ -62,6 +62,36 @@ class App extends Controller
       return $data;
     }
 
+    public function projectFields()
+    {
+      $data = [
+        'featured_on_front_page' => get_field('featured_on_front_page'),
+        'url' => get_field('url'),
+        'case_study_button' => get_field('case_study_button'),
+        'services_provided' => get_field('services_provided'),
+        'additional_services' => get_field('additional_services'),
+        'technologies_used' => get_field('technologies_used'),
+        'additional_technologies' => get_field('additional_technologies'),
+        'client_details' => get_field('client_details'),
+      ];
+
+      return $data;
+    }
+
+    // public function projectfields() {
+    //   return get_field('portfolio_content', 'option');
+    // }
+    //
+    // public function project
+    public function portfolio() {
+      $data = [
+        'title'   => get_field('portfolio_title', 'option'),
+        'content' => get_field('portfolio_content', 'option'),
+      ];
+
+      return $data;
+    }
+
     // public function frontPage()
     // {
     //   $fp = [];

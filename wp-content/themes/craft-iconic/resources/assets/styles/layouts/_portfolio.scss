@@ -1,0 +1,55 @@
+.projects-container {
+  padding: 60px 15px;
+}
+
+article.project {
+  display: grid;
+
+  // .portfolio-content,
+  // img.portfolio-img {
+  //   flex: 1;
+  // }
+  //
+  // img.portfolio-img {
+  //   grid-column: 1
+  // }
+  //
+  // .portfolio-content {
+  //   grid-column: 2;
+  //   padding: 15px;
+  //
+  // }
+
+  @include tablet {
+    display: grid;
+    grid-auto-flow: dense;
+    padding: 60px 0;
+
+
+    img.portfolio-img {
+      grid-column: 1;
+      min-width: 400px;
+    }
+
+    .portfolio-content {
+      grid-column: 2;
+      padding-left: 15px;
+    }
+
+    &:nth-of-type(odd) {
+      img.portfolio-img {
+        grid-column: 2;
+      }
+
+      .portfolio-content {
+        grid-column: 1;
+      }
+    }
+  }
+
+  @include laptop {
+    .portfolio-content {
+      padding-left: 30px;
+    }
+  }
+}
