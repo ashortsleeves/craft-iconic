@@ -1,5 +1,23 @@
 .projects-container {
   padding: 60px 15px;
+
+  nav.website-categories {
+    margin-bottom: 60px;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+
+      li {
+        display: inline-block;
+        padding-left: none;
+        padding: 15px;
+        background-color: #fff;
+        margin: 0 3px;
+      }
+    }
+  }
 }
 
 article.project {

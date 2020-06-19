@@ -18,6 +18,13 @@
       {!! get_search_form(false) !!}
     @endif
     <div class="container sm-container projects-container">
+      <nav class="website-categories">
+        <ul>
+          @foreach($portfolio['nav'] as $nav)
+            <li><a href="{!! esc_url( get_term_link( $nav ) )!!}">{{$nav->name }}</a></li>
+          @endforeach
+        </ul>
+      </nav>
       @while (have_posts()) @php the_post() @endphp
         @include('partials.content-'.get_post_type())
       @endwhile

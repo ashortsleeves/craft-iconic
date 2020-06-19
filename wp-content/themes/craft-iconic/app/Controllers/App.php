@@ -87,6 +87,7 @@ class App extends Controller
       $data = [
         'title'   => get_field('portfolio_title', 'option'),
         'content' => get_field('portfolio_content', 'option'),
+        'nav'     => get_field('portfolio_navigation', 'option'),
       ];
 
       return $data;

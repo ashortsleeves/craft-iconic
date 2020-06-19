@@ -87,8 +87,8 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('Portfolio', 'sage'),
+        'id'            => 'sidebar-portfolio'
     ] + $config);
 });
 
@@ -176,7 +176,7 @@ add_action('init', function() {
             'menu_icon'   => 'dashicons-carrot',
 
             // This is where we add taxonomies to our CPT
-            'taxonomies'          => array('sitecategories' ),
+            'taxonomies'          => array('website-category' ),
         );
 
         // Registering your Custom Post Type
@@ -216,6 +216,6 @@ add_action('init', function() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => false,
 	);
-	register_taxonomy( 'sitecategories', array( 'project' ), $args );
+	register_taxonomy( 'website-category', array( 'project' ), $args );
 
 });
