@@ -8,19 +8,10 @@
       </div>
       {!! get_search_form(false) !!}
     @endif
-    <div class="container sm-container posts-container">
-      <div class="row">
-        <div class="col-md-8">
-          @while(have_posts()) @php the_post() @endphp
-            @include('partials.content-single-'.get_post_type())
-          @endwhile
-        </div>
-        <div class="col-md-4">
-          <div class="cardstyle">
-              @php dynamic_sidebar('sidebar-primary') @endphp
-          </div>
-        </div>
-      </div>
+    <div class="container sm-container">
+      @while(have_posts()) @php the_post() @endphp
+        @include('partials.content-single-'.get_post_type())
+      @endwhile
     </div>
 
     {!! get_the_posts_navigation() !!}

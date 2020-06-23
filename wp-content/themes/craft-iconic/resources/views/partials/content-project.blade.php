@@ -7,5 +7,6 @@
     <div class="entry-summary">
       @php the_excerpt() @endphp
     </div>
+    <a href="{{ get_permalink() }}" class="btn">Learn More</a>
   </div>
 </article>
