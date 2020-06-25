@@ -52,3 +52,22 @@
     }
   }
 }
+
+.primary_pagination {
+  span.page-numbers,
+  a.page-numbers {
+    padding: 4px 12px;
+    background-color: #fff;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 3px;
+  }
+
+  a.page-numbers {
+    &:hover,
+    &:focus {
+      background-color: $brand-hover;
+      color: #fff;
+    }
+  }
+}

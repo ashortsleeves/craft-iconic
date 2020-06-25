@@ -1,5 +1,12 @@
 <div class="jumbo-bg article-background" style="background-image:url({{$footer['background']['url']}})">
 </div>
+<nav class="website-categories">
+  <ul>
+    @foreach($portfolio['nav'] as $nav)
+      <li><a href="{!! esc_url( get_term_link( $nav ) )!!}">{{$nav->name }}</a></li>
+    @endforeach
+  </ul>
+</nav>
   <article @php post_class() @endphp>
 
     @if(has_post_thumbnail())
@@ -25,9 +32,11 @@
                   @endif
 
                 @endforeach
-                @foreach($project_fields['additional_services'] as $additional_service)
-                  <li>{!!$additional_service['service']!!}</li>
-                @endforeach
+                @if($project_fields['additional_services'])
+                  @foreach($project_fields['additional_services'] as $additional_service)
+                    <li>{!!$additional_service['service']!!}</li>
+                  @endforeach
+                @endif
               </ul>
             </li>
           @endif
@@ -54,23 +63,25 @@
               <li><i class="fas fa-phone"></i>
                {{$deet['phone']}}</li>
             @endif
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <div class="address">
-                @if($deet['street'])
-                  {{$deet['street']}} <br />
-                @endif
-                @if($deet['city'])
-                  {{$deet['city']}},
-                @endif
-                @if($deet['state'])
-                  {{$deet['state']}}
-                @endif
-                @if($deet['zip'])
-                  {{$deet['zip']}}
-                @endif
-              </div>
-            </li>
+            @if($deet['state'])
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="address">
+                  @if($deet['street'])
+                    {{$deet['street']}} <br />
+                  @endif
+                  @if($deet['city'])
+                    {{$deet['city']}},
+                  @endif
+                  @if($deet['state'])
+                    {{$deet['state']}}
+                  @endif
+                  @if($deet['zip'])
+                    {{$deet['zip']}}
+                  @endif
+                </div>
+              </li>
+            @endif
           @endif
         </ul>
       </div>
