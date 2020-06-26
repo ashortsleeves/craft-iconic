@@ -62,15 +62,20 @@
         <div class="container">
           <h1>{!!$front_page['section4']['title']!!}</h1>
           <div class="portfolio-slick">
-            @foreach($front_page['section4']['repeater'] as $repeater)
+            @foreach($project_query as $project)
               <div class="portfolio-single">
-                <img src="{{$repeater['image']['url']}}" alt="{{$repeater['image']['title']}}" />
+                <img src="{{ get_the_post_thumbnail_url( $project->ID, 'full' ) }}" alt="{{$repeater['image']['title']}}" />
                 <div class="portfolio-single-inner">
-                  <h2>{!! $repeater['title'] !!}</h2>
-                  <span class="subtitle"><a href="https://{!! $repeater['subtitle'] !!}" target="_blank">{!! $repeater['subtitle'] !!}</a></span>
-                  <p>{{$repeater['content']}}</p>
+                  <h2>{!! $project->post_title!!}</h2>
+                  <span class="subtitle"><a href="https://{!! get_field('url', $project->ID) !!}" target="_blank">{!! get_field('url', $project->ID) !!}</a></span>
+                  @if(!empty($project->post_excerpt))
+                    <p>{!! $project->post_excerpt!!}</p>
+                  @else
+                    <p>{!! $project->post_content !!}</p>
+                  @endif
+
                   @if(!empty($repeater['button']))
-                    <a href="{{$repeater['button']['url']}}" class="btn btn-lg">{{$repeater['button']['title']}}</a>
+                    <a href="{{get_permalink()}}" class="btn btn-lg">Learn More</a>
                   @endif
                 </div>
               </div>

@@ -16,11 +16,13 @@
               <i class="fas fa-phone"></i>
               <a href="tel:{{$footer['site_info']['phone']}}">{{$footer['site_info']['phone']}}</a>
             </div>
-            <div class="nap">
-              <i class="fas fa-map-marker-alt"></i>
+            @if($footer['site_info']['state'])
+              <div class="nap">
+                <i class="fas fa-map-marker-alt"></i>
 
-              <a target="_blank" href="https://www.google.com/maps/search/{{str_replace(" ", "+", $footer['site_info']['address'])}}+{{ str_replace(" ", "+", $footer['site_info']['town'])}}">{{$footer['site_info']['address']}}, {{$footer['site_info']['town']}}, {{$footer['site_info']['state']}} {{$footer['site_info']['zip']}}</a>
-            </div>
+                <a target="_blank" href="https://www.google.com/maps/search/{{str_replace(" ", "+", $footer['site_info']['address'])}}+{{ str_replace(" ", "+", $footer['site_info']['town'])}}">{{$footer['site_info']['address']}}, {{$footer['site_info']['town']}}, {{$footer['site_info']['state']}} {{$footer['site_info']['zip']}}</a>
+              </div>
+            @endif
           </div>
           <div class="col-md-6">
             <div class="cardstyle contact-card">

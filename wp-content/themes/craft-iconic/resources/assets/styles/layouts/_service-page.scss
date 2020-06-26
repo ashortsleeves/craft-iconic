@@ -1,6 +1,6 @@
 section.services-hero {
   .container {
-    @include desktop {
+    @include laptop {
       height: 520px;
     }
 

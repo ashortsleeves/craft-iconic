@@ -5,7 +5,7 @@
     <div class="container">
       <h1>{!!$portfolio['title']!!}</h1>
       @if($hero['button'])
-        <a class="btn" href="{!! $hero['button']['url'] !!}">{{$hero['button']['title']}}</a>
+        <a class="btn btn-lg" href="{!! $hero['button']['url'] !!}">{{$hero['button']['title']}}</a>
       @endif
     </div>
   </section>

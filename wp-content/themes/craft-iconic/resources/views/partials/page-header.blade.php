@@ -14,7 +14,7 @@
          <span id="typed"></span>
        </div>
        @if($hero['button'])
-         <a class="btn" href="{!! $hero['button']['url'] !!}">{{$hero['button']['title']}}</a>
+         <a class="btn btn-lg" href="{!! $hero['button']['url'] !!}">{{$hero['button']['title']}}</a>
        @endif
      </div>
     </div>

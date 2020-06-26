@@ -19,4 +19,45 @@ class FrontPage extends Controller
 
     return $data;
   }
+
+  // public function projectQuery() {
+  //   $post_type = 'project';
+  //   $taxonomy = 'website-category';
+  //
+  //
+  //   $terms = get_terms($taxonomy);
+  //
+  //   foreach($terms as $term) {
+  //     $args = array(
+  //       'post_type' => $post_type,
+  //       'posts_per_page' => 5,
+  //       'tax_query' => array(
+  //         array(
+  //           'taxonomy' => $taxonomy,
+  //           'field' => 'slug',
+  //           'terms' => $term->slug,
+  //         )
+  //       )
+  //     );
+  //
+  //     $data[] = [
+  //       'posts' => new \WP_Query($args),
+  //       'term'  => $term,
+  //     ];
+  //   }
+  //
+  //   return $data;
+  // }
+
+
+  public function projectQuery() {
+    $data = get_posts(array(
+      'posts_per_page' => 5,
+      'post_type'      => 'project',
+      'meta_key'       => 'featured_on_front_page',
+      'meta_value'     => '1',
+    ));
+
+    return $data;
+  }
 }
