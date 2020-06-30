@@ -52,6 +52,7 @@ article.project {
     .portfolio-content {
       grid-column: 2;
       padding-left: 15px;
+      padding-right: 15px;
     }
 
     &:nth-of-type(odd) {

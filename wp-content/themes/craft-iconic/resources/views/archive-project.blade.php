@@ -1,15 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="hero jumbo-bg responsive-hero portfolio-hero" style="background-image:url({{$hero['global_background']['url']}})">
-    <div class="container">
-      <h1>{!!$portfolio['title']!!}</h1>
-      @if($hero['button'])
-        <a class="btn btn-lg" href="{!! $hero['button']['url'] !!}">{{$hero['button']['title']}}</a>
-      @endif
-    </div>
-  </section>
-
   <div class="blog-wrap">
     @if (!have_posts())
       <div class="alert alert-warning">

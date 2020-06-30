@@ -72,6 +72,8 @@ section.portfolio-hero {
 
 body.about {
   .about-row {
+
+
     p.adam-txt-desktop,
     hr.wp-block-separator {
       display: none;
@@ -88,11 +90,13 @@ body.about {
     }
 
     img {
-      margin-bottom: 30px;
-
       @include laptop {
         border: solid 4px $brand-primary;
       }
+    }
+
+    figure {
+      margin-bottom: 30px;
     }
 
     p {
@@ -103,11 +107,28 @@ body.about {
       }
     }
 
+    .about-row {
+      .col-12 {
+        @include laptop {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
     hr.wp-block-separator {
       border-top: transparent;
       height: 2px;
       background: linear-gradient(to right, #f26916, #f7a777);
       opacity: 0.7;
+    }
+  }
+}
+
+
+body.template-contact {
+  .wrap {
+    @include tablet {
+      max-height: 185px;
     }
   }
 }
