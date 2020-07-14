@@ -43,9 +43,9 @@
       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
     @endif
     <div class="socials">
-      <a href="{{$footer['site_info']['facebook']}}"><i class="fab fa-facebook-f"></i></a>
-      <a href="{{$footer['site_info']['twitter']}}"><i class="fab fa-twitter"></i></a>
-      <a href="{{$footer['site_info']['linkedin']}}"><i class="fab fa-linkedin-in"></i></a>
+      <a target="_blank" href="{{$footer['site_info']['facebook']}}"><i class="fab fa-facebook-f"></i></a>
+      <a target="_blank" href="{{$footer['site_info']['twitter']}}"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" href="{{$footer['site_info']['linkedin']}}"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </div>
 </footer>
