@@ -1,7 +1,7 @@
 .projects-container {
   padding: 60px 15px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 
   @include tablet {
     flex-direction: column;
@@ -12,9 +12,11 @@ nav.website-categories {
   position: relative;
   z-index: 2;
   padding-top: 60px;
+  order: 2;
 
   @include tablet {
     margin-bottom: 60px;
+    order: 0;
   }
 
   ul {
@@ -64,6 +66,7 @@ nav.website-categories {
 
 article.project {
   display: grid;
+  order: 1;
 
   @include tablet {
     display: grid;
