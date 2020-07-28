@@ -1,4 +1,6 @@
-# Craft Iconic Web Design and Online Marketing
+<img align="right" src="https://raw.githubusercontent.com/ashortsleeves/ashortsleeves/master/ci.png" alt="Adam Shortsleeves" height=350px/>
+
+# Craft Iconic Web Design
 
 ### [crafticonic.com](https://crafticonic.com/)
 
