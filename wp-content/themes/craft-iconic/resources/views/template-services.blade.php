@@ -15,7 +15,7 @@
               <a class='btn btn-lg' href="{{$page_header['button']['url']}}">{!!$page_header['button']['title']!!}</a>
             </div>
             <div class="col-xl-7 col-md-6 col-img">
-              <img src="{!!$page_header['image']['url']!!}" />
+              <img src="{!!$page_header['image']['url']!!}" alt="{{$page_header['image']['caption']}}"/>
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@
       @foreach($service_sections as $section)
         <section class="service-section">
           <div class="jumbo-bg" style="background-image:url({{$section['background']['url']}})">
-            
+
           </div>
           <div class="container">
             <div class="content">
