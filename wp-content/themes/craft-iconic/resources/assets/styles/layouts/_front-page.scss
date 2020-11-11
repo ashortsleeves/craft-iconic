@@ -208,7 +208,22 @@ section.fp-section {
   }
 
   &.section3 {
+    position: relative;
+
+    &::before {
+      display: block;
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(9,9,121,0) 18%, rgba(255,255,255,1) 100%);
+      opacity: 0.1;
+    }
+
     .container {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -216,6 +231,8 @@ section.fp-section {
 
       a.btn-lg {
         border: solid 3px #fff;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.1);
+        background-color: #C9491E;
 
         @include laptop {
           margin-top: 30px;
