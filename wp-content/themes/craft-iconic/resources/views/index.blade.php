@@ -9,6 +9,7 @@
       {!! get_search_form(false) !!}
     @endif
     <div class="container sm-container posts-container">
+      <h1>Craft Iconic Blog</h1>
       <div class="row">
         <div class="col-md-8">
           @while (have_posts()) @php the_post() @endphp

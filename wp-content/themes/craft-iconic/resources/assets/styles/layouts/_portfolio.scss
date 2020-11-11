@@ -1,3 +1,7 @@
+.blog-wrap {
+  @include bg-textured;
+}
+
 .projects-container {
   padding: 60px 15px;
   display: flex;

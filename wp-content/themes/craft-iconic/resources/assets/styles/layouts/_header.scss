@@ -24,30 +24,29 @@ header.banner {
     img {
       position: relative;
       z-index: 999;
+      width: 210px;
+
+      @include laptop {
+        width: auto;
+      }
     }
 
-    &::before,
-    &::after {
+    &::before {
       position: absolute;
       content: " ";
     }
 
     &::before {
-      left: 0;
+      left: 62px;
       right: 100%;
       transition: 0.3s;
       background: linear-gradient(to right, $brand-primary, lighten($brand-primary, 20%));
       height: 2px;
-      top: calc(100% - 3px);
-    }
+      top: calc(100% - 13px);
 
-    &::after {
-      background-color: white;
-      transform: skewX(-45deg);
-      height: 5px;
-      width: 9px;
-      left: 50px;
-      top: calc(100% - 4px);
+      @include laptop {
+        left: 73px;
+      }
     }
 
     &:hover,

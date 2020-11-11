@@ -1,4 +1,5 @@
 {
+  "images/bg_repeat.png": "images/bg_repeat_573b04fb.png",
   "images/fb.png": "images/fb_886ce763.png",
   "images/footer-logo.png": "images/footer-logo_14b67426.png",
   "images/linkedin.png": "images/linkedin_99a6bfb6.png",
@@ -28,7 +29,7 @@
   "vendor/fa-solid-900.ttf": "vendor/fa-solid-900_65e6c65a.ttf",
   "vendor/fa-solid-900.woff": "vendor/fa-solid-900_85615afd.woff",
   "vendor/fa-solid-900.woff2": "vendor/fa-solid-900_4c7a7246.woff2",
-  "scripts/customizer.js": "scripts/customizer_7656f1ef.js",
-  "styles/main.css": "styles/main_7656f1ef.css",
-  "scripts/main.js": "scripts/main_7656f1ef.js"
+  "scripts/customizer.js": "scripts/customizer_275063cd.js",
+  "styles/main.css": "styles/main_275063cd.css",
+  "scripts/main.js": "scripts/main_275063cd.js"
 }

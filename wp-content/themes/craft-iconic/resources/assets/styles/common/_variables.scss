@@ -150,6 +150,13 @@ $width_hd:              1600px;
   }
 }
 
+@mixin bg-textured() {
+  background-size: cover;
+  background-image: url('../images/bg_repeat.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 //Slick
 $slick-loader-path:     '~slick-carousel/slick/';
 $slick-font-path:       '#{$slick-loader-path}fonts/';
