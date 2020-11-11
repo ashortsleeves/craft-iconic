@@ -38,7 +38,7 @@
 </section>
 <footer class="content-info">
   <div class="container">
-    <img src="@asset('images/footer-logo.png')" />
+    <img src="@asset('images/footerlogo.png')" />
     @if (has_nav_menu('primary_navigation'))
       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
     @endif
