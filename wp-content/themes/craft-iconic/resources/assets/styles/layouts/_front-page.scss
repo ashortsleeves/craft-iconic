@@ -208,6 +208,25 @@ section.fp-section {
   }
 
   &.section3 {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      a.btn-lg {
+        border: solid 3px #fff;
+
+        @include laptop {
+          margin-top: 30px;
+        }
+
+        @include desktop {
+          margin-top: 60px;
+        }
+      }
+    }
+
     h1 {
       color: #fff;
     }

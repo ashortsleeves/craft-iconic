@@ -53,6 +53,10 @@
               </div>
             @endforeach
           </div>
+          @if($front_page['section3']['button'])
+            <a class="btn btn-lg" href="{!!$front_page['section3']['button']['url']!!}">{!!$front_page['section3']['button']['title']!!}</a>
+          @endif
+
         </div>
       </section>
     @endif
