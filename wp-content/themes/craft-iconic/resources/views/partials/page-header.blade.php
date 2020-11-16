@@ -17,9 +17,13 @@
          <a class="btn btn-lg" href="{!! $hero['button']['url'] !!}">{{$hero['button']['title']}}</a>
        @endif
      </div>
+     @if($front_page['featured_projects'])
+       <div class="image-container">
+         <img class="left" src="{{$front_page['featured_projects']['left']['url']}}" />
+         <img class="primary" src="{{$front_page['featured_projects']['primary']['url']}}"  />
+         <img class="right" src="{{$front_page['featured_projects']['right']['url']}}" />
+       </div>
+     @endif
     </div>
-    @if($front_page['featured_projects'])
-      <img class="featured-projects" src="{{$front_page['featured_projects']['url']}}" alt="{{$front_page['featured_projects']['title']}}" />
-    @endif
   </section>
 @endif

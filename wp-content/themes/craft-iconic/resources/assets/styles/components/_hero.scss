@@ -27,7 +27,7 @@ section.hero {
     background-color: rgba(255, 255, 254, 0.7);
 
     a.btn-lg {
-      margin-top: 20px;  
+      margin-top: 20px;
     }
 
 
@@ -69,6 +69,9 @@ section.hero {
     }
 
     .cta {
+      position: relative;
+      z-index: 999;
+
       span.cta-text,
       span#typed,
       .typed-cursor  {
@@ -115,43 +118,143 @@ section.hero {
     }
   }
 
-  img.featured-projects {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    bottom: -15px;
-    opacity: 0.3;
+  .image-container {
+      position: absolute;
+      right: 0;
+      // left: 0;
+      height: 100%;
+      bottom: -15px;
+      opacity: 0.3;
+      perspective: 140px;
+      // overflow: hidden;
+
+      opacity: 0.5;
+
+      @include mobile {
+        opacity: 0.7;
+      }
+
+      @include phablet {
+        opacity: 1;
+      }
+
+      @include tablet {
+        perspective: 490px;
+        padding-top: 30px;
+      }
+
+      @include laptop {
+        padding-top: 60px;
+
+      }
+
+      @include desktop {
+        margin-right: -75px;
+      }
+
+      @include wide {
+        margin-right: 0;
+      }
+      // @include desktop {
+      //   height: calc(100% - 65px);
+      //   width: auto;
+      //   top: 65px;
+      //   left: 40%;
+      //   opacity: 1;
+      // }
+
+    img {
+      transform: rotateY(-5deg) rotateX(7deg);
+      bottom: 0;
+      position: relative;
+      width: 150px;
+      box-shadow: 10px 10px 26px -9px rgba(0,0,0,0.49);
+      transition: $base-transition;
+
+      @include tablet {
+        width: 200px;
+      }
+
+      @include laptop {
+        width: 300px;
+      }
+
+      @include desktop {
+        width: 400px;
+      }
+
+      &.primary {
+        z-index: 998;
+        margin-left: -100px;
+        margin-right: -100px;
+
+        @include laptop {
+          margin-left: -200px;
+          margin-right: -200px;
+        }
+      }
 
 
-    @include mobile {
-      opacity: 0.7;
-      top: 15px;
-      bottom: inherit;
-      left: 55%;
-      height: calc(100% - 15px);
-      width: auto;
-    }
+      &.left {
+        margin-top: 40px;
 
-    @include tablet {
-      top: 30px;
-      opacity: 1;
-      left: 45%;
-      height: calc(100% - 30px);
-    }
+        @include tablet {
+          margin-top: 60px;
+        }
 
-    @include laptop {
-      left: 50%;
+        @include desktop {
+          margin-top: 100px;
+        }
+      }
 
-    }
 
-    @include desktop {
-      height: calc(100% - 65px);
-      width: auto;
-      top: 65px;
-      left: 40%;
-      opacity: 1;
+      &.right {
+        margin-top: 30px;
+
+        @include tablet {
+          margin-top: 50px;
+        }
+      }
     }
   }
+
+  // img.featured-projects {
+  //   position: absolute;
+  //   right: 0;
+  //   height: 100%;
+  //   bottom: -15px;
+  //   opacity: 0.3;
+  //
+  //
+  //   @include mobile {
+  //     opacity: 0.7;
+  //     top: 15px;
+  //     bottom: inherit;
+  //     left: 55%;
+  //     height: calc(100% - 15px);
+  //     width: auto;
+  //   }
+  //
+  //   @include tablet {
+  //     top: 30px;
+  //     opacity: 1;
+  //     left: 45%;
+  //     height: calc(100% - 30px);
+  //   }
+  //
+  //   @include laptop {
+  //     left: 50%;
+  //
+  //   }
+  //
+  //   @include desktop {
+  //     height: calc(100% - 65px);
+  //     width: auto;
+  //     top: 65px;
+  //     left: 40%;
+  //     opacity: 1;
+  //   }
+  // }
 
 // FOR OLD IMG
   // img.featured-projects {
