@@ -58,6 +58,17 @@
     </div>
   </div>
 </div>
+@if($footer['audit'])
+  <div class="audit-form hidden">
+    <div class="contact-card">
+      <button class="audit-close close"><i class="fas fa-times"></i></button>
+
+      @php
+       gravity_form($footer['audit'], true);
+      @endphp
+    </div>
+  </div>
+@endif
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",

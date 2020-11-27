@@ -48,6 +48,7 @@ class App extends Controller
         'content'    => get_field('contact_footer_content','option'),
         'background' => get_field('contact_footer_background', 'option'),
         'site_info'  => get_field('site_info', 'option'),
+        'audit'      => get_field('free_audit_form', 'option'),
       ];
 
       return $data;

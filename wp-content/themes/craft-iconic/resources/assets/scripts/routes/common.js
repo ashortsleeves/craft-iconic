@@ -1,4 +1,5 @@
 import Typed from 'typed.js';
+import Cookies from 'js.cookie';
 
 export default {
   init() {
@@ -9,8 +10,8 @@ export default {
     // toggles hamburger and nav open and closed states
     // Can also be included with a regular script tag
 
-    $('document').ready(function(){
 
+    if($('#typed').length != 0) {
       var options = {
         stringsElement: '#typed-strings',
         startDelay: 1200,
@@ -20,8 +21,19 @@ export default {
       };
 
       var typed = new Typed('#typed', options);
-    });
 
+    }
+
+    if(Cookies.get('craftIconicAudit') != true){
+      setTimeout(function(){
+          $('.audit-form').removeClass('hidden');
+      }, 15000);
+      Cookies.set('craftIconicAudit', true, {
+        expires: 1
+      });
+    }
+
+    //hamburger menu
     var removeClass = true;
     $('.hamburger').click(function () {
       $('.hamburger').toggleClass('is-active');
@@ -42,5 +54,9 @@ export default {
       }
       removeClass = true;
     }, false);
+
+    $('.audit-close').click(function(){
+      $('.audit-form').addClass('hidden');
+    })
   },
 };
