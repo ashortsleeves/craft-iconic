@@ -69,6 +69,8 @@ $container-max-widths: (
 );
 
 // Breakpoint variables
+$width_iphone5:         320px;
+$width_galaxy:          360px;
 $width_mobile:          480px;
 $width_phablet:         576px;
 $width_tablet:          768px;
@@ -81,6 +83,10 @@ $width_hd:              1600px;
  * Mixins
  */
 // Media query mixins
+@mixin iphone5 { @media (min-width: #{$width_iphone5}) { @content; } }
+
+@mixin galaxy { @media (min-width: #{$width_galaxy}) { @content; } }
+
 @mixin mobile { @media (min-width: #{$width_mobile}) { @content; } }
 
 @mixin phablet { @media (min-width: #{$width_phablet}) { @content; } }

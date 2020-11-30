@@ -24,7 +24,11 @@ header.banner {
     img {
       position: relative;
       z-index: 999;
-      width: 210px;
+      width: 190px;
+
+      @include iphone5 {
+        width: 210px;
+      }
 
       @include laptop {
         width: auto;
