@@ -172,6 +172,7 @@ section.hero {
       }
 
       &.primary {
+        transform: rotateY(-5deg) rotateX(7deg) translateZ(40px);
         z-index: 998;
         margin-left: -230px;
         margin-right: -230px;
@@ -181,21 +182,10 @@ section.hero {
           margin-left: -200px;
           margin-right: -200px;
         }
-
-        @include laptop {
-          width: 350px;
-        }
-
-        @include desktop {
-            width: 400px;
-        }
-
-        @include wide {
-          width: 450px;
-        }
       }
 
       &.left {
+        z-index: 1;
         margin-top: 40px;
 
         @include tablet {
