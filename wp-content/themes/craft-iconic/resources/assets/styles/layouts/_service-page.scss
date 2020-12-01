@@ -63,8 +63,15 @@ section.service-section {
     height: 100%;
     background-position: right;
 
+
     @include laptop {
       top: 150px;
+    }
+  }
+
+  &:nth-of-type(even) {
+    .jumbo-bg {
+      background-attachment: fixed;    
     }
   }
 

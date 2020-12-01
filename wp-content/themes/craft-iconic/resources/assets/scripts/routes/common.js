@@ -1,5 +1,6 @@
 import Typed from 'typed.js';
 import Cookies from 'js.cookie';
+import parallax from 'jquery-parallax';
 
 export default {
   init() {
@@ -9,6 +10,8 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
     // toggles hamburger and nav open and closed states
     // Can also be included with a regular script tag
+
+    $('.service-section:nth-of-type(even) .jumbo-bg').parallax();
 
 
     if($('#typed').length != 0) {

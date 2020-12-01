@@ -5147,6 +5147,11 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
+jquery-parallax@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-parallax/-/jquery-parallax-1.0.1.tgz#89717fa4bfbfb2d34be60245f3cc08419bf2209e"
+  integrity sha1-iXF/pL+/stNL5gJF88wIQZvyIJ4=
+
 jquery@^3.3.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
