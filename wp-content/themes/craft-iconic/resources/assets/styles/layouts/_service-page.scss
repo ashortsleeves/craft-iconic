@@ -54,6 +54,7 @@ section.services-hero {
 
 section.service-section {
   position: relative;
+  clip: rect(0, auto, auto, 0);
 
   .jumbo-bg {
     position: absolute;
@@ -61,8 +62,6 @@ section.service-section {
     left: 0;
     right: 0;
     height: 100%;
-
-    background-position: right;
 
     @include laptop {
       top: 150px;
