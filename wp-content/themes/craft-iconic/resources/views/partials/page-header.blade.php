@@ -19,9 +19,9 @@
      </div>
      @if($front_page['featured_projects'])
        <div class="image-container">
-         <img class="left" src="{{$front_page['featured_projects']['left']['url']}}" />
-         <img class="primary" src="{{$front_page['featured_projects']['primary']['url']}}"  />
-         <img class="right" src="{{$front_page['featured_projects']['right']['url']}}" />
+         <img style="opacity: 0;" class="image-portfolio left" src="{{$front_page['featured_projects']['left']['url']}}" />
+         <img style="opacity: 0;" class="image-portfolio primary" src="{{$front_page['featured_projects']['primary']['url']}}"  />
+         <img style="opacity: 0;" class="image-portfolio right" src="{{$front_page['featured_projects']['right']['url']}}" />
        </div>
      @endif
     </div>

@@ -4,6 +4,10 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
+    $('.image-portfolio').delay(1000).queue(function(next){
+      $(this).addClass('visible').dequeue();
+    });
+
     $('.portfolio-slick').slick({
       infinite: true,
       slidesToScroll: 1,
