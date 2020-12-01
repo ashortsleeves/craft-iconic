@@ -27,6 +27,7 @@ section.hero {
     z-index: 999;
     display: flex;
     align-items: center;
+    min-height: 350px;
 
     a.btn-lg {
       margin-top: 20px;
@@ -38,7 +39,7 @@ section.hero {
     }
 
     @include laptop {
-      height: 350px;
+      min-height: 450px;
     }
 
     #typed-strings {
