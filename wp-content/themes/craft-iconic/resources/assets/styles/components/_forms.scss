@@ -102,7 +102,16 @@
       }
     }
   }
+
+  .ginput_recaptcha {
+    transform: scale(.77);
+
+    @include iphone5 {
+      transform: scale(1);
+    }
+  }
 }
+
 .gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled) {
   width: 100%;
   text-transform: capitalize;

@@ -4,7 +4,10 @@ section.hero {
 
   &.hero-fp {
     background-position: top left;
-    background-attachment: fixed;
+
+    @include laptop {
+      background-attachment: fixed;
+    }
 
     .container {
       height: calc(100vh - 60px);
