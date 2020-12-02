@@ -1,7 +1,7 @@
 section.services-hero {
   .container {
     @include laptop {
-      height: 520px;
+      height: 650px;
     }
 
     .row {
@@ -71,7 +71,7 @@ section.service-section {
 
   &:nth-of-type(even) {
     .jumbo-bg {
-      background-attachment: fixed;    
+      background-attachment: fixed;
     }
   }
 

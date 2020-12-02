@@ -1,6 +1,6 @@
 import Typed from 'typed.js';
 import Cookies from 'js.cookie';
-import parallax from 'jquery-parallax';
+import Parallax from 'jquery-parallax';
 
 export default {
   init() {
@@ -12,7 +12,6 @@ export default {
     // Can also be included with a regular script tag
 
     $('.service-section:nth-of-type(even) .jumbo-bg').parallax();
-
 
     if($('#typed').length != 0) {
       var options = {

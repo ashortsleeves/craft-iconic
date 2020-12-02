@@ -4,9 +4,11 @@ section.hero {
 
   &.hero-fp {
     background-position: top left;
+    background-attachment: fixed;
 
     .container {
       height: calc(100vh - 60px);
+      max-height: 900px;
 
       @include tablet {
         height: 650px;
@@ -29,17 +31,16 @@ section.hero {
     align-items: center;
     min-height: 350px;
 
-    a.btn-lg {
-      margin-top: 20px;
-    }
-
-
     @include phablet {
       background-color: transparent;
     }
 
     @include laptop {
       min-height: 450px;
+    }
+
+    a.btn-lg {
+      margin-top: 20px;
     }
 
     #typed-strings {
@@ -149,7 +150,15 @@ section.hero {
       }
 
       @include desktop {
-        margin-right: -75px;
+        margin-right: 60px;
+      }
+
+      @include wide {
+        margin-right: -15px;
+      }
+
+      @include hd {
+        margin-right: 60px;
       }
 
     img {

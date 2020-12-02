@@ -1,3 +1,5 @@
+import appear from 'jquery-appear-original';
+
 export default {
   init() {
     // JavaScript to be fired on the home page
@@ -8,6 +10,25 @@ export default {
       $(this).addClass('visible').dequeue();
     });
 
+    $('#btn1').appear();
+    $('#btn1').on('appear', function(event, $all_appeared_elements) {
+      $(this).addClass("animate");
+    });
+
+    $('.section3').appear();
+    $('.section3').on('appear', function(event, $all_appeared_elements) {
+      var i = 1;
+      var col = '.section3 .col-sm-6';
+      var time = 150;
+
+      $(col).each(function(){
+        setTimeout( function(){
+          $('.section3 .col-sm-6:nth-of-type('+i +')').addClass("animate");
+          i++;
+        }, time)
+        time += 150;
+      });
+    });
     $('.portfolio-slick').slick({
       infinite: true,
       slidesToScroll: 1,

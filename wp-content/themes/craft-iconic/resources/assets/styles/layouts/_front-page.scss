@@ -94,6 +94,31 @@ section.fp-section {
 
       a.btn {
         margin-top: 25px;
+        opacity: 0;
+        transition: $base-transition;
+        position: relative;
+
+        &::after {
+          content: " ";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          border: solid 2px #fff;
+          transform: scale(1.4);
+          transition: 0.3s;
+        }
+
+
+        &.animate {
+          opacity: 1;
+
+          &::after {
+            transform: scale(1);
+          }
+        }
       }
 
       @include tablet {
@@ -122,7 +147,13 @@ section.fp-section {
     }
   }
 
+  &.section2,
+  &.section3 {
+    background-attachment: fixed;
+  }
+
   &.section2 {
+
     @include tablet {
       .container {
         padding-top: 35px;
@@ -208,6 +239,10 @@ section.fp-section {
   }
 
   &.section3 {
+
+  }
+
+  &.section3 {
     position: relative;
 
     &::before {
@@ -248,10 +283,14 @@ section.fp-section {
       color: #fff;
     }
 
+
+
     .col-sm-6 {
       padding-bottom: 20px;
 
       .cardstyle {
+        transition: $base-transition;
+
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -261,6 +300,10 @@ section.fp-section {
         height: 100%;
         padding: 15px;
         position: relative;
+
+        @include tablet {
+          opacity: 0;
+        }
 
         i,
         h3,
@@ -280,6 +323,14 @@ section.fp-section {
           padding: 35px 50px;
         }
       }
+
+      &.animate {
+        .cardstyle {
+          opacity: 1;
+          transform: translateX(0) translateY(0)!important;
+        }
+      }
+
 
       @include mobile {
         padding-bottom: 30px;
@@ -305,24 +356,50 @@ section.fp-section {
         }
       }
 
-      &:last-of-type() {
+      &:nth-of-type(1) {
+        order: 1;
+      }
+
+      &:nth-of-type(2) {
+        order: 2;
+      }
+
+      &:nth-of-type(3) {
+        order: 3;
+      }
+
+      &:nth-of-type(4) {
+        order: 6;
+
         .cardstyle::after {
           display: none;
         }
       }
 
+      &:nth-of-type(5) {
+          order: 5;
+      }
+
+      &:last-of-type() {
+        order: 4;
+      }
+
       @include phablet {
         &:nth-of-type(1),
         &:nth-of-type(5) {
-          .cardstyle::after {
-            left: 100%;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-left: 15px solid white;
+
+          .cardstyle {
+
+            &::after {
+              left: 100%;
+              border-top: 20px solid transparent;
+              border-bottom: 20px solid transparent;
+              border-left: 15px solid white;
+            }
           }
         }
 
-        &:nth-of-type(4) {
+        &:last-of-type {
           .cardstyle::after {
             display: block;
             right: 100%;
@@ -342,7 +419,7 @@ section.fp-section {
           }
         }
 
-        &:last-of-type() {
+        &:nth-of-type(4) {
           .cardstyle::after {
             display: none;
           }
@@ -350,6 +427,20 @@ section.fp-section {
       }
 
       @include tablet {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          .cardstyle {
+            transform: translateX(30px);
+          }
+        }
+
+        &:nth-of-type(3) {
+          .cardstyle {
+            transform: translateY(30px);
+          }
+        }
+
+
         &:nth-of-type(2) {
           .cardstyle::after {
             left: 100%;
@@ -360,24 +451,31 @@ section.fp-section {
           }
         }
 
-        &:nth-of-type(4) {
-          .cardstyle::after {
-            display: none;
+        &:last-of-type {
+          .cardstyle {
+            transform: translateX(-30px);
+
+            &::after {
+              display: none;
+            }
           }
         }
 
         &:nth-of-type(5),
-        &:last-of-type {
-          .cardstyle::after {
-            display: block;
-            right: 100%;
-            left: auto;
-            border-left: transparent;
-            top: calc(50% - 20px);
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-right: 15px solid white;
+        &:nth-of-type(4) {
+          .cardstyle {
+            transform: translateX(-30px);
 
+            &::after {
+              display: block;
+              right: 100%;
+              left: auto;
+              border-left: transparent;
+              top: calc(50% - 20px);
+              border-top: 20px solid transparent;
+              border-bottom: 20px solid transparent;
+              border-right: 15px solid white;
+            }
           }
         }
       }

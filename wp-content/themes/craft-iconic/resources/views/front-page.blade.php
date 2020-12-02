@@ -13,7 +13,7 @@
         <div class="content">
           <h1>{!!$front_page['section1']['title']!!}</h1>
           <p>{!!$front_page['section1']['content']!!}</p>
-          <a class="btn btn-white btn-lg" href={{$front_page['section1']['button']['url']}}>{{$front_page['section1']['button']['title']}}</a>
+          <a data-appear-top-offset="-100" id="btn1" class="btn btn-white btn-lg" href={{$front_page['section1']['button']['url']}}>{{$front_page['section1']['button']['title']}}</a>
         </div>
       </section>
     @endif
@@ -39,7 +39,7 @@
     @endif
 
     @if($front_page['section3'])
-      <section class="fp-section section3 jumbo-bg" style="background-image:url({{$front_page['section3']['background']['url']}})">
+      <section data-appear-top-offset="-300" class="fp-section section3 jumbo-bg" style="background-image:url({{$front_page['section3']['background']['url']}})">
         <div class="container">
           <h1>{!!$front_page['section3']['title']!!}</h1>
           <div class="row">
