@@ -106,7 +106,7 @@
   .ginput_recaptcha {
     transform: scale(.77);
 
-    @include iphone5 {
+    @include mobile {
       transform: scale(1);
     }
   }
