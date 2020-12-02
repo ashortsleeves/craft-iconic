@@ -71,7 +71,9 @@ section.service-section {
 
   &:nth-of-type(even) {
     .jumbo-bg {
-      background-attachment: fixed;
+      @include laptop {
+        background-attachment: fixed;
+      }
     }
   }
 

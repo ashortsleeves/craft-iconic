@@ -29,7 +29,7 @@ export default {
     if(Cookies.get('craftIconicAudit') != true){
       setTimeout(function(){
           $('.audit-form').removeClass('hidden');
-      }, 15000);
+      }, 20000);
       Cookies.set('craftIconicAudit', true, {
         expires: 1
       });

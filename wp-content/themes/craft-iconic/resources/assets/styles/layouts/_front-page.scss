@@ -149,7 +149,9 @@ section.fp-section {
 
   &.section2,
   &.section3 {
-    background-attachment: fixed;
+    @include laptop {
+      background-attachment: fixed;  
+    }
   }
 
   &.section2 {
