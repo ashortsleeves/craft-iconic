@@ -39,12 +39,12 @@
     @endif
 
     @if($front_page['section3'])
-      <section data-appear-top-offset="-300" class="fp-section section3 jumbo-bg" style="background-image:url({{$front_page['section3']['background']['url']}})">
+      <section class="fp-section section3 jumbo-bg" style="background-image:url({{$front_page['section3']['background']['url']}})">
         <div class="container">
           <h1>{!!$front_page['section3']['title']!!}</h1>
           <div class="row">
             @foreach($front_page['section3']['repeater'] as $repeater)
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-6 col-md-4" data-appear-top-offset="-200">
                 <div class="cardstyle">
                   {!! $repeater['icon'] !!}
                   <h3>{!! $repeater['title'] !!}</h3>

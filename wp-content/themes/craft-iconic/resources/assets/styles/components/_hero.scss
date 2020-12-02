@@ -18,7 +18,9 @@ section.hero {
       }
 
       @include desktop {
+        min-height: 640px;
         height: 800px;
+        max-height: 100vh;
       }
 
       @include wide {

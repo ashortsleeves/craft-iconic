@@ -15,20 +15,26 @@ export default {
       $(this).addClass("animate");
     });
 
-    $('.section3').appear();
-    $('.section3').on('appear', function(event, $all_appeared_elements) {
-      var i = 1;
-      var col = '.section3 .col-sm-6';
-      var time = 150;
+    function ciShow(col, i) {
+      var selector = '.section3 .col-sm-6:nth-of-type('+i+')'
 
-      $(col).each(function(){
-        setTimeout( function(){
-          $('.section3 .col-sm-6:nth-of-type('+i +')').addClass("animate");
-          i++;
-        }, time)
-        time += 150;
+      $(selector).appear();
+      $(selector).on('appear', function(event, $all_appeared_elements) {
+        var time = 150;
+
+        $(col).each(function(){
+          setTimeout( function(){
+            $('.section3 .col-sm-6:nth-of-type('+i +')').addClass("animate");
+            i++;
+          }, time)
+          time += 150;
+        });
       });
-    });
+    }
+
+    ciShow('.section3 .col-sm-6:nth-of-type(-n+3)', 1);
+    ciShow('.section3 .col-sm-6:nth-of-type(+n+4)', 4);
+
     $('.portfolio-slick').slick({
       infinite: true,
       slidesToScroll: 1,
