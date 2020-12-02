@@ -78,7 +78,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.12.1",
     "bootstrap": "v4.3.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery-appear-original": "^0.6.2",
     "jquery-parallax": "^1.0.1",
     "js.cookie": "^0.0.4",
