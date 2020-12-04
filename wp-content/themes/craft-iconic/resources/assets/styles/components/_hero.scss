@@ -231,3 +231,69 @@ section.hero {
     }
   }
 }
+
+
+body.about {
+  section.about-us-hero {
+    perspective: 490px;
+    position: relative;
+
+    // background-position: right 70px;
+    // background-attachment: fixed;
+    background-color: red;
+
+
+
+    .sm-container {
+      @include wide {
+        height: 450px;
+        // background-size: 1600px;
+      }
+
+      @include hd {
+        height: 635px;
+        // background-size: 2560px;
+      }
+    }
+
+    img.about-us-photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height:auto;
+      max-width: none;
+
+      @include tablet {
+        top: -15px;
+        width: 2130px;
+        right: calc(50% - 800px);
+      }
+
+      @include hd {
+        right: 0;
+        width: 2560px;
+      }
+    }
+
+    .website-container {
+      position: absolute;
+      top: 93px;
+      right: calc(50% - 305px);
+      width: 243px;
+      height: 415px;
+      -webkit-transform: rotateY(-5deg) rotateX(7deg) translateZ(40px);
+      transform: rotateZ(-7deg)rotateY(0) rotateX(0);
+      overflow: hidden;
+
+
+      background-color: green;
+      opacity: 0.9;
+
+      img.website {
+        opacity: 0.1;
+      }
+    }
+
+  }
+
+}
